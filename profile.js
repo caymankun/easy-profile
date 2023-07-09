@@ -11,7 +11,7 @@ popup.className = 'popup';
 // ポップアップを閉じるボタン要素を作成
 const popupClose = document.createElement('img');
 popupClose.className = 'popup-close';
-popupClose.src = './back.svg';
+popupClose.src = 'https://c-profile.pages.dev/back.svg';
 popupClose.addEventListener('click', closePopup);
 
 // ポップアップ内のコンテンツを作成
