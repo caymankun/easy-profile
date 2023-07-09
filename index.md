@@ -2,6 +2,7 @@
 
 スクリプト
 
+
 html```
 <script src="https://c-profile.pages.dev/profile.js"></script>
 ```
