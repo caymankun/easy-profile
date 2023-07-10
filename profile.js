@@ -39,7 +39,7 @@ const popupContent = `
     <h2>profile</h2>
     <img src="https://caymankun.f5.si/image/logo/c-logo.webp" alt="caymankun-logo" height="50px" width="50px"><br>
     <b>name : caymankun</b><br>
-    <b>food : 寿司とイチゴ</b><br>
+    <b>food : sushi & strawberry</b><br>
     <b>thing : android</b><br>
 `;
 
