@@ -1,3 +1,23 @@
+// HTML要素を取得
+const html = document.querySelector('html');
+
+// meta要素（Content-Type）を作成
+const metaContentType = document.createElement('meta');
+metaContentType.setAttribute('http-equiv', 'Content-Type');
+metaContentType.setAttribute('content', 'text/html; charset=UTF-8');
+html.appendChild(metaContentType);
+
+// meta要素（charset）を作成
+const metaCharset = document.createElement('meta');
+metaCharset.setAttribute('charset', 'UTF-8');
+html.appendChild(metaCharset);
+
+// meta要素（content-language）を作成
+const metaContentLanguage = document.createElement('meta');
+metaContentLanguage.setAttribute('http-equiv', 'content-language');
+metaContentLanguage.setAttribute('content', 'ja');
+html.appendChild(metaContentLanguage);
+
 // ポップアップを表示するボタン要素を作成
 const button = document.createElement('button');
 button.textContent = 'ポップアップを表示する';
