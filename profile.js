@@ -46,11 +46,6 @@ function applyStyles() {
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 9998;
         }
-
-        .overlay:hover {
-            cursor: pointer;
-        }
-        
         .popup {
             display: none;
             position: fixed;
