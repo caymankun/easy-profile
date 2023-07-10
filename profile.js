@@ -34,17 +34,18 @@ popupClose.className = 'popup-close';
 popupClose.src = 'https://c-profile.pages.dev/back.svg';
 popupClose.addEventListener('click', closePopup);
 
-// ポップアップ内のコンテンツを作成
-const popupContent = `
+// ポップアップ内のコンテンツ要素を作成
+const popupContent = document.createElement('div');
+popupContent.innerHTML = `
     <h2>profile</h2>
-    <img src="https://caymankun.f5.si/image/logo/c-logo.webp" alt="caymankun-logo" height="100px" width="100px"><br>
-    <b>name : caymankun</b><br>
-    <b>food : sushi & strawberry</b><br>
-    <b>thing : android</b><br>
+    <img src="https://caymankun.f5.si/image/logo/c-logo.webp" alt="caymankun-logo" height="50px" width="50px"><br>
+    <b>名前 : caymankun</b><br>
+    <b>好きな食べ物 : 寿司とイチゴ</b><br>
+    <b>好きな物 : android</b><br>
 `;
 
-// ポップアップ要素にコンテンツを追加
-popup.innerHTML = popupContent;
+// ポップアップ要素にコンテンツ要素を追加
+popup.appendChild(popupContent);
 popup.insertBefore(popupClose, popup.firstChild);
 
 // ボディ要素に要素を追加
