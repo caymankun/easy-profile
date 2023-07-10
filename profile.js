@@ -15,34 +15,17 @@ popupClose.src = 'https://c-profile.pages.dev/back.svg';
 popupClose.addEventListener('click', closePopup);
 
 // ポップアップ内のコンテンツを作成
-const h2 = document.createElement('h2');
-h2.textContent = 'profile';
-
-const img = document.createElement('img');
-img.src = 'https://caymankun.f5.si/image/logo/c-logo.webp';
-img.alt = 'caymankun-logo';
-img.height = '55';
-img.width = '75';
-
-const b1 = document.createElement('b');
-b1.textContent = '名前 : caymankun';
-
-const b2 = document.createElement('b');
-b2.textContent = '好きな食べ物 : 寿司とイチゴ';
-
-const b3 = document.createElement('b');
-b3.textContent = '好きな物 : android';
+const popupContent = `
+    <h2>profile</h2>
+    <img src="https://caymankun.f5.si/image/logo/c-logo.webp" alt="caymankun-logo" height="50px" width="50px"><br>
+    <b>name : caymankun</b><br>
+    <b>food : sushi & strawberry</b><br>
+    <b>thing : android</b><br>
+`;
 
 // ポップアップ要素にコンテンツを追加
-popup.appendChild(popupClose);
-popup.appendChild(h2);
-popup.appendChild(img);
-popup.appendChild(document.createElement('br'));
-popup.appendChild(b1);
-popup.appendChild(document.createElement('br'));
-popup.appendChild(b2);
-popup.appendChild(document.createElement('br'));
-popup.appendChild(b3);
+popup.innerHTML = popupContent;
+popup.insertBefore(popupClose, popup.firstChild);
 
 // ボディ要素に要素を追加
 document.body.appendChild(overlay);
