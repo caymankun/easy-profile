@@ -18,11 +18,6 @@ metaContentLanguage.setAttribute('http-equiv', 'content-language');
 metaContentLanguage.setAttribute('content', 'ja');
 html.appendChild(metaContentLanguage);
 
-// ポップアップを表示するボタン要素を作成
-const button = document.createElement('button');
-button.textContent = 'ポップアップを表示する';
-button.addEventListener('click', openPopup);
-
 // ポップアップオーバーレイ要素を作成
 const overlay = document.createElement('div');
 overlay.id = 'popup-overlay';
@@ -53,7 +48,6 @@ popup.innerHTML = popupContent;
 popup.insertBefore(popupClose, popup.firstChild);
 
 // ボディ要素に要素を追加
-document.body.appendChild(button);
 document.body.appendChild(overlay);
 document.body.appendChild(popup);
 
