@@ -7,6 +7,7 @@ overlay.className = 'overlay';
 const popup = document.createElement('div');
 popup.id = 'popup';
 popup.className = 'popup';
+overlay.addEventListener('click', closePopup); // オーバーレイをクリックしたらポップアップを閉じる
 
 // ポップアップを閉じるボタン要素を作成
 const popupClose = document.createElement('img');
@@ -46,6 +47,10 @@ function applyStyles() {
             z-index: 9998;
         }
 
+        .overlay:hover {
+            cursor: pointer;
+        }
+        
         .popup {
             display: none;
             position: fixed;
