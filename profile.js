@@ -1,23 +1,3 @@
-// HTML要素を取得
-const html = document.querySelector('html');
-
-// meta要素（Content-Type）を作成
-const metaContentType = document.createElement('meta');
-metaContentType.setAttribute('http-equiv', 'Content-Type');
-metaContentType.setAttribute('content', 'text/html; charset=UTF-8');
-html.appendChild(metaContentType);
-
-// meta要素（charset）を作成
-const metaCharset = document.createElement('meta');
-metaCharset.setAttribute('charset', 'UTF-8');
-html.appendChild(metaCharset);
-
-// meta要素（content-language）を作成
-const metaContentLanguage = document.createElement('meta');
-metaContentLanguage.setAttribute('http-equiv', 'content-language');
-metaContentLanguage.setAttribute('content', 'ja');
-html.appendChild(metaContentLanguage);
-
 // ポップアップオーバーレイ要素を作成
 const overlay = document.createElement('div');
 overlay.id = 'popup-overlay';
@@ -34,19 +14,35 @@ popupClose.className = 'popup-close';
 popupClose.src = 'https://c-profile.pages.dev/back.svg';
 popupClose.addEventListener('click', closePopup);
 
-// ポップアップ内のコンテンツ要素を作成
-const popupContent = document.createElement('div');
-popupContent.innerHTML = `
-    <h2>profile</h2>
-    <img src="https://caymankun.f5.si/image/logo/c-logo.webp" alt="caymankun-logo" height="50px" width="50px"><br>
-    <b>名前 : caymankun</b><br>
-    <b>好きな食べ物 : 寿司とイチゴ</b><br>
-    <b>好きな物 : android</b><br>
-`;
+// ポップアップ内のコンテンツを作成
+const h2 = document.createElement('h2');
+h2.textContent = 'profile';
 
-// ポップアップ要素にコンテンツ要素を追加
-popup.appendChild(popupContent);
-popup.insertBefore(popupClose, popup.firstChild);
+const img = document.createElement('img');
+img.src = 'https://caymankun.f5.si/image/logo/c-logo.webp';
+img.alt = 'caymankun-logo';
+img.height = '55';
+img.width = '75';
+
+const b1 = document.createElement('b');
+b1.textContent = '名前 : caymankun';
+
+const b2 = document.createElement('b');
+b2.textContent = '好きな食べ物 : 寿司とイチゴ';
+
+const b3 = document.createElement('b');
+b3.textContent = '好きな物 : android';
+
+// ポップアップ要素にコンテンツを追加
+popup.appendChild(popupClose);
+popup.appendChild(h2);
+popup.appendChild(img);
+popup.appendChild(document.createElement('br'));
+popup.appendChild(b1);
+popup.appendChild(document.createElement('br'));
+popup.appendChild(b2);
+popup.appendChild(document.createElement('br'));
+popup.appendChild(b3);
 
 // ボディ要素に要素を追加
 document.body.appendChild(overlay);
